@@ -853,7 +853,9 @@
      background: none repeat scroll 0 0 #E5E5E5;
  }
  
- #nav_top {}
+ #nav_top {
+     padding: 0px;
+ }
  
  #nav_top li {
      background: url("images/bg_navTop.png") no-repeat scroll right center rgba(0, 0, 0, 0);
