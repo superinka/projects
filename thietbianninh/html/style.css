@@ -893,6 +893,7 @@
  
  #header_bot {
      background-color: #FFF;
+     padding-bottom: 5px;
  }
  
  .top-logo img {
@@ -921,4 +922,49 @@
  .box_content .icon {
      float: left;
      margin-right: 10px;
+ }
+ 
+ .box_support {
+     float: right;
+     height: 58px;
+     margin-top: 10px;
+     position: relative;
+     width: 185px;
+ }
+ 
+ .box_support .title_support {
+     color: #000;
+     display: block;
+     font-weight: bold;
+     height: 19px;
+     line-height: 18px;
+     padding-left: 25px;
+     background: url(images/hotline-header-icon.png) no-repeat;
+     font-size: 14px;
+ }
+ 
+ .box_support .list_support li {
+     float: left;
+     margin: 2px 0px 0;
+     width: 140px;
+ }
+ 
+ .box_support .list_support li strong {
+     color: #FF2626;
+     display: block;
+     font-weight: bold;
+     line-height: 17px;
+     font-size: 17px;
+ }
+ 
+ .icon_support {
+     position: absolute;
+     right: 0;
+     top: -7px;
+     z-index: 10;
+ }
+ 
+ .list_support {
+     padding: 0px;
+     list-style: none;
  }
