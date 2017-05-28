@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+
+	/* Homepage*/
+
+	div.collapse.navbar-collapse {float:none;}
+		ul.menu-bot li a {font-size: 8px;}
+	.info p {font-size: 10px;}
+	.title h4:before {width: 85%}
+	.vertical_megamenu .nav.vertical-megamenu > li > .dropdown-menu {left: 10px;top:100%;}
+	.topsearch-entry {float:none;width: 100%;}
+
+}

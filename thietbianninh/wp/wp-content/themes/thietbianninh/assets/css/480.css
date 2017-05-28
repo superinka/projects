@@ -1,0 +1,10 @@
+@media screen and (max-width: 480px) {
+
+	/* Homepage*/
+	.slogan h2 {font-size: 15px;}
+	.logo {text-align: center}
+
+	.vertical_megamenu .nav.vertical-megamenu > li > .dropdown-menu {left: 10px;top:100%}
+	.topsearch-entry {float:none;width: 100%;}
+	
+}

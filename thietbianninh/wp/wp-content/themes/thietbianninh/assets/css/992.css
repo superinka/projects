@@ -1,0 +1,11 @@
+@media screen and (max-width: 992px) {
+
+	/* Homepage*/
+
+	div.collapse.navbar-collapse {float:none;}
+	.navbar-nav>li {padding-right: 5px;}
+	.navbar-nav>li>a {font-size:13px;}
+			ul.menu-bot li a {font-size: 10px;}
+	.info p {font-size: 12px;}
+	.title h4:before {width: 85%}
+}
