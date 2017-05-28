@@ -11,3 +11,5 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $product;
 ?>
 <h1 itemprop="name" class="product_title"><?php the_title(); ?></h1>
+<div class="pro_review">
+</div>

@@ -46,7 +46,7 @@ a:focus {
 }
 
 body {
-    background: #b3b4b7;
+    background: #fff;
 }
 
 body:before {
@@ -815,6 +815,7 @@ fieldset legend {
 .main-content {
     /*margin-top: 20px;*/
     background-color: #fff;
+    margin-bottom: 50px;
 }
 
 legend {
@@ -1723,4 +1724,76 @@ legend {
     color: #fff;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.bubble {
+    left: 0px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 20px;
+    z-index: 9;
+}
+
+.bubble .inside {
+    background-color: #e74c3c;
+    border-radius: 999px;
+    display: table;
+    height: 42px;
+    position: relative;
+    width: 42px;
+    -webkit-border-radius: 999px;
+}
+
+.bubble .inside .inside-text {
+    color: #fff;
+    display: table-cell;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.col_info h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.col_info .pro_review {
+    border-bottom: 2px solid #ff6600;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.col_info .price_info {
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.col_info .price_info .pro_price strong {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.pro_price .pro_marketPrice {
+    color: #000000 !important;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.line-phone,
+.line-mobi {
+    display: block;
+    line-height: 26px;
+    background: url(images/iphone.png) no-repeat left center;
+    padding-left: 18px;
+    font-size: 11px;
 }

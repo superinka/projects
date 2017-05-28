@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="single-product-top row">
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 		<?php
 			/**
 			 * woocommerce_show_product_images hook
@@ -35,21 +35,26 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			do_action( 'woocommerce_before_single_product_summary' );
 		?>
 		</div>
-		<div class="product-summary col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div class="product-summary col-lg-7 col-md-7 col-sm-12 col-xs-12">
+			<div class="col_info">
 
-			<?php
-				/**
-				 * woocommerce_single_product_summary hook
-				 *
-				 * @hooked woocommerce_template_single_title - 5
-				 * @hooked woocommerce_template_single_price - 10
-				 * @hooked woocommerce_template_single_excerpt - 20
-				 * @hooked woocommerce_template_single_add_to_cart - 30
-				 * @hooked woocommerce_template_single_meta - 40
-				 * @hooked woocommerce_template_single_sharing - 50
-				 */
-				do_action( 'woocommerce_single_product_summary' );
-			?>
+				<?php
+					/**
+					* woocommerce_single_product_summary hook
+					*
+					* @hooked woocommerce_template_single_title - 5
+					* @hooked woocommerce_template_single_price - 10
+					* @hooked woocommerce_template_single_excerpt - 20
+					* @hooked woocommerce_template_single_add_to_cart - 30
+					* @hooked woocommerce_template_single_meta - 40
+					* @hooked woocommerce_template_single_sharing - 50
+					*/
+					do_action( 'woocommerce_single_product_summary' );
+					// Move WooCommerce price
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+				?>
+			</div>
 
 		</div><!--- summary-bottom --->
 	</div><!-- .summary -->

@@ -29,5 +29,5 @@
     <!--/header-->
 	
 	<!-- main -->
-    <div id="main" class="clearfix">
+     <div class="main-content clear-fix">
     

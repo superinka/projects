@@ -23,3 +23,9 @@ global $post, $product;
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 
 </div>
+<div class="line-phone">
+	<span>Hotline:</span> <b>Mr Nam: 0965.098.053</b> /  <b>Mr Đảng: 0166.717.5016</b> /  <b>Tư vấn viên: 04.3787.8923</b>
+</div>
+<div class="line-mobi">
+	<span>Tel:</span> <b>04.3787.8923</b>
+</div>

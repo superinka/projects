@@ -210,13 +210,6 @@ function theme_widgets_init() {
 
 
 
-function remove_loop_button(){
-remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-}
-add_action('init','remove_loop_button');
-
-
 /*
 * goes in theme functions.php or a custom plugin. Replace the image filename/path with your own :)
 *
@@ -229,7 +222,7 @@ function custom_fix_thumbnail() {
     function custom_woocommerce_placeholder_img_src( $src ) {
     $upload_dir = wp_upload_dir();
     $uploads = untrailingslashit( $upload_dir['baseurl'] );
-    $src = $uploads . '/2016/06/haiminh.jpg';
+    $src = $uploads . '/2017/05/anninh.png';
      
     return $src;
     }
@@ -247,3 +240,35 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 
 
 
+add_filter( 'woocommerce_get_price_html', 'wpa83367_price_html', 100, 2 );
+add_filter( 'woocommerce_template_single_price', 'wpa83367_price_html', 10);
+    function wpa83367_price_html( $price, $product ) {
+   // return $product->price;
+    if ( $product->price > 0 ) {
+      if ( $product->price && isset( $product->regular_price ) ) {
+        $from = $product->regular_price;
+        $to = $product->price;
+        if($from == $to) {
+            return '<span class="pro_price">'. ( ( is_numeric( $to ) ) ? woocommerce_price( $to ) : $to ) .'</span>';
+        }
+        else {
+            return '<span class="pro_price">'. ( ( is_numeric( $to ) ) ? woocommerce_price( $to ) : $to ) .'</span>'.' '.'<span class="pro_marketPrice">'.( ( is_numeric( $form ) ) ? woocommerce_price( $from ) : $from ) .'</span>';
+        }
+        
+      } else {
+        $to = $product->price;
+        return '<span class="pro_marketPrice">' . ( ( is_numeric( $to ) ) ? woocommerce_price( $to ) : $to ) . '</span>';
+      }
+   } else {
+     return '<span class="pro_price">Liên Hệ</span>';
+   }
+ }
+
+
+
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10); 
+
+function woocommerce_template_single_price() { 
+    wc_get_template( 'single-product/price.php' ); 
+} 

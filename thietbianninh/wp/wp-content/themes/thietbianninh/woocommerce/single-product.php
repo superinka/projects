@@ -17,10 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div class="container">
 <div class="row">
-<?php get_template_part('templates/left-shop'); ?>
 
 
-<div class="col-xs-12 col-sm-9 col-md-9 categories-box">
+
+<div class="col-xs-12 col-sm-12 col-md-12 categories-box" style="padding-top: 30px;">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -30,14 +30,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 */
 		do_action('woocommerce_before_main_content');
 	?>
-	<div class="single-product clearfix">
-	
-		<?php while ( have_posts() ) : the_post(); ?>
+	<div class="col-md-9 col-xs-12 col-sm-12">
+		<div class="single-product clearfix">
+		
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
+				<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
-	
+			<?php endwhile; // end of the loop. ?>
+		
+		</div>
 	</div>
 	
 	<?php
